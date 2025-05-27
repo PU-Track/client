@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'Erotique';
+  src: url('./assets/fonts/MaziusDisplay-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  background: url('./assets/images/one.jpg') no-repeat center center/cover;
+  min-height: 100vh; 
+  padding-bottom: 160px;
+  color: white;
+  overflow: visible;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+nav, .hero-content, .brand {
+  position: relative;
+  z-index: 2;
+}
+
+nav {
+  position: relative;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: white;
+  z-index: 2;
+}
+
+.nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.8rem;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #FFCD00;
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-icons {
+  margin-left: auto;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  filter: brightness(0) invert(1);
+}
+
+.hero-content {
+  padding: 70px 60px 0;
+  max-width: 720px;
+}
+
+.hero-content .subtitle {
+  font-family: 'Erotique', sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  gap: 12px;
+}
+
+.cta-arrow {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #FFCD00;
+  background-image: url("data:image/svg+xml,%3Csvg fill='black' viewBox='0 0 24 24' width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 5l8 7-8 7z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+}
+
+.brand {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16rem;
+  font-weight: 400;
+  letter-spacing: -25px;
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+  line-height: 1;
+  white-space: nowrap;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .brand {
+    font-size: 8rem; 
+  }
+
+  .hero-content {
+    padding: 120px 24px 0;
+  }
+
+  nav {
+    padding: 20px 24px;
+  }
+}
