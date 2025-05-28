@@ -1,4 +1,6 @@
-import './style.css';
+// main.js
+import './index.css';
+import './register.css';
 
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
@@ -14,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const roleEl = document.querySelector('#roleGroup .select-option.active');
     const gender = genderEl.dataset.value;
     const role = roleEl.dataset.value;
-    console.log("안녕ㅏㄴ녕")
 
     if (!genderEl || !roleEl) {
       alert("❗ Please select both gender and role.");

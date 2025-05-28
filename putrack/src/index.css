@@ -92,13 +92,13 @@ nav {
 
 .hero-content {
   padding: 70px 60px 0;
-  max-width: 720px;
 }
 
 .hero-content .subtitle {
   font-family: 'Erotique', sans-serif;
   font-size: 1.8rem;
   line-height: 1.6;
+  padding-left: 40px;
 }
 
 .cta {
@@ -111,6 +111,7 @@ nav {
   text-decoration: none;
   position: relative;
   gap: 12px;
+  padding-left: 40px;
 }
 
 .cta-arrow {
@@ -127,7 +128,7 @@ nav {
 
 .brand {
   position: absolute;
-  bottom: 80px;
+  bottom: 130px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 16rem;

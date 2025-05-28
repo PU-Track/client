@@ -8,208 +8,99 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: radial-gradient(circle at top, #1e1e1e 0%, #000000 100%);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            padding: 40px;
-        }
-
-        .container {
-            display: flex;
-            max-width: 1100px;
-            width: 100%;
-            gap: 60px;
-        }
-
-        .left {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 24px;
-        }
-
-        .left h1 {
-            font-size: 2rem;
-            font-weight: 600;
-        }
-
-        .left ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .left li {
-            display: flex;
-            gap: 12px;
-            align-items: flex-start;
-            font-size: 0.95rem;
-        }
-
-        .left li::before {
-            content: '\272A';
-            color: #FFDC00;
-            font-size: 1.1rem;
-        }
-
-        .right {
-            flex: 1;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 32px;
-            border-radius: 16px;
-            backdrop-filter: blur(20px);
-        }
-
-        .right h2 {
-            font-size: 1.2rem;
-            margin-bottom: 16px;
-        }
-
-        .social-buttons {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 16px;
-        }
-
-        .social-buttons button {
-            flex: 1;
-            padding: 10px;
-            border-radius: 8px;
-            border: none;
-            background: #222;
-            color: white;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        .form {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .form-row {
-            display: flex;
-            gap: 12px;
-        }
-
-        .form input {
-            width: 100%;
-            padding: 10px 12px;
-            border-radius: 8px;
-            border: 1px solid #444;
-            background: #111;
-            color: white;
-        }
-
-        .form .info {
-            font-size: 0.8rem;
-            color: #999;
-        }
-
-        .form button {
-            margin-top: 8px;
-            padding: 12px;
-            border-radius: 8px;
-            background: linear-gradient(to right, #f7e032, #f5d000);
-            border: none;
-            color: black;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-        }
-
-        .footer-text {
-            margin-top: 12px;
-            font-size: 0.8rem;
-            color: #bbb;
-        }
-
-        .footer-text a {
-            color: #f7e032;
-            text-decoration: none;
-        }
-
-        .select-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .select-option {
-            padding: 10px 16px;
-            border: 1px solid #555;
-            background: #111;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.9rem;
-        }
-
-        .select-option.active {
-            background-color: #f7e032;
-            color: black;
-            font-weight: bold;
-            border-color: #f7e032;
-        }
-    </style>
+    <link rel="stylesheet" href="./src/register.css" />
 </head>
 
 <body>
-    <div class="container">
-        <div class="left">
-            <h1>Start your 30-day free trial</h1>
-            <ul>
-                <li>Invite unlimited colleagues</li>
-                <li>Ensure compliance</li>
-                <li>Built-in security</li>
-            </ul>
+    <!-- 네비게이션 -->
+    <nav>
+        <div class="logo">PU-TRACK</div>
+        <div class="nav-links">
+            <a href="#">CONTACT</a>
+            <a href="#">PROSPECTUS</a>
+            <a href="#">VISIT</a>
         </div>
-        <div class="right">
-            <h2>Register with:</h2>
+        <div class="nav-icons">
+            <img src="./src/assets/images/icThreedots.svg" alt="Menu" class="icon burger" />
+            <img src="./src/assets/images/icSearch.svg" alt="Search" class="icon search" />
+        </div>
+    </nav>
 
-            <form id="registerForm" class="form">
-                <div class="form-row">
-                    <label style="flex: 1;">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Name" required style="flex: 3;" />
-                </div>
-                <div class="form-row">
-                    <label style="flex: 1;">Age</label>
-                    <input type="number" id="age" name="age" placeholder="Age" required style="flex: 3;" />
-                </div>
+    <!-- 좌우 구조 -->
+    <div class="main-layout">
+        <!-- 왼쪽 이미지 + 오버레이 -->
+        <div class="image-panel">
+            <div class="overlay"></div>
+            <img src="./src/assets/images/two.png" alt="Left Visual" />
+        </div>
 
-                <label>Gender</label>
-                <div class="select-group" id="genderGroup">
-                    <div class="select-option" data-value="M">Male</div>
-                    <div class="select-option" data-value="F">Female</div>
-                </div>
+        <!-- 오른쪽 폼 -->
+        <div class="form-panel">
+            <div class="form-card">
+                <h2>Get Started with PU-TRACK</h2>
+                <p class="subheading">
+                    Please allow a moment to complete your registration.</br>An access code will be issued shortly after.
+                </p>
+                <form id="registerForm" class="form">
+                    <div class="form-row horizontal">
+                        <div style="flex: 2; display: flex; flex-direction: column; gap: 6px;">
+                            <label>Name</label>
+                            <input type="text" name="name" required />
+                        </div>
+                        <div style="flex: 1; display: flex; flex-direction: column; gap: 6px;">
+                            <label>Age</label>
+                            <input type="number" name="age" required />
+                        </div>
+                    </div>
 
-                <label>Role</label>
-                <div class="select-group" id="roleGroup">
-                    <div class="select-option" data-value="CAREGIVER">Caregiver</div>
-                    <div class="select-option" data-value="DOCTOR">Doctor</div>
-                    <div class="select-option" data-value="NURSE">Nurse</div>
-                    <div class="select-option" data-value="NURSING_ASSISTANT">Nursing Assistant</div>
-                    <div class="select-option" data-value="OTHER">Other</div>
-                </div>
+                    <div class="form-row">
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="example@email.com" required />
+                    </div>
 
-                <button type="submit">Sign Up</button>
-            </form>
+                    <div class="form-row">
+                        <label>Phone Number</label>
+                        <input type="tel" name="phone" placeholder="010-1234-5678" />
+                    </div>
+
+                    <div class="form-row">
+                        <label>Affiliated Institution</label>
+                        <input type="text" name="organization" placeholder="Hospital, Care Center, etc." />
+                    </div>
+
+                    <div class="form-row">
+                        <label>Gender</label>
+                        <div class="select-group" id="genderGroup">
+                            <div class="select-option" data-value="M">Male</div>
+                            <div class="select-option" data-value="F">Female</div>
+                            <div class="select-option" data-value="O">Other</div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Role</label>
+                        <div class="select-group" id="roleGroup">
+                            <div class="select-option" data-value="CAREGIVER">Caregiver</div>
+                            <div class="select-option" data-value="DOCTOR">Doctor</div>
+                            <div class="select-option" data-value="NURSE">Nurse</div>
+                            <div class="select-option" data-value="NURSING_ASSISTANT">Nursing Assistant</div>
+                            <div class="select-option" data-value="OTHER">Other</div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Additional Notes</label>
+                        <textarea name="note" rows="4" placeholder="Any specific needs, schedule preference, etc."
+                            style="padding: 14px; font-size: 1rem; border-radius: 10px; background: #111; color: white; border: 1px solid #444;"></textarea>
+                    </div>
+
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
         </div>
     </div>
+
     <script type="module" src="./src/main.js"></script>
 </body>
+
 </html>
